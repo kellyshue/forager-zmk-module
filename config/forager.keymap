@@ -85,7 +85,7 @@
         base {
             bindings = <
             &kp Q           &kp W           &kp E           &kp R                 &kp T                                           &kp Y                             &kp U           &kp I               &kp O           &kp P
-            &lhm LCTRL A    &lhm LALT S     &lhm LGUI D     &lhm LSHFT F     &lhm LA(LC(LG(LSHFT))) G                             &rhm LA(LC(LG(LSHFT))) H          &rhm LGUI J     &rhm LSHFT K        &rhm LALT L     &rhm LCTRL SEMICOLON
+            &lhm LCTRL A    &lhm LALT S     &lhm LGUI D     &lhm LSHFT F     &lhm LA(LC(LG(LSHFT))) G                             &rhm LA(LC(LG(LSHFT))) H          &rhm LSHFT J    &rhm LGUI K         &rhm LALT L     &rhm LCTRL SEMICOLON
             &kp Z           &kp X           &kp C           &kp V                 &kp B                                           &kp N                             &kp M           &kp COMMA           &kp PERIOD      &kp SLASH
                                                                                   &sym_bspc 2 0   &smart_shift    &smart_shift    &lt NAV SPACE
             >;
