@@ -5,8 +5,8 @@
 
 #define BASE 0
 #define SYM  1
-// #define NAV  2
-// #define ADJ  3
+#define NAV  2
+#define NUM  3
 
 // #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 #define MEH LS(LC(LALT))
@@ -88,7 +88,7 @@
 //            &lhm LCTRL A    &lhm LALT S     &lhm RGUI D     &lhm LSHFT F     &lhm LA(LC(RG(LSHFT))) G                             &rhm LA(LC(LG(LSHFT))) H          &rhm LSHFT J    &rhm LGUI K         &rhm LALT L     &rhm LCTRL SEMICOLON
             &mt LCTRL A    &mt LALT S     &mt RGUI D     &mt LSHFT F     &mt LA(LC(RG(LSHFT))) G                             &mt LA(LC(RG(LSHFT))) H          &mt LSHFT J    &mt RGUI K         &mt LALT L     &mt LCTRL SEMICOLON
             &kp Z           &kp X           &kp C           &kp V                 &kp B                                           &kp N                             &kp M           &kp COMMA           &kp PERIOD      &kp SLASH
-                                                                                  &lt 1 BACKSPACE   &kp TAB    &kp ENTER    &lt 1 SPACE
+                                                                                  &lt 1 BACKSPACE   &lt 3 TAB    &lt 2 ENTER    &lt 1 SPACE
             >;
         };
 
@@ -98,6 +98,25 @@
             &kp CARET        &kp TILDE      &kp LBRC             &kp RBRC              &kp DLLR      &kp MINUS   &kp GRAVE      &kp SQT     &kp DQT          &kp EQUAL
             &none            &kp BSLH       &kp LBKT             &kp RBKT              &none         &kp DOT     &kp PIPE       &caps_word  &kp CAPS         &kp FSLH
                                                      &trans                &trans        &trans      &trans
+            >;
+        };
+
+
+        nav {
+            bindings = <
+            &none             &none         &none         &none           &none                       &kp PG_UP      &kp HOME  &kp UP    &kp END    &kp SYSREQ
+            &kp LCTRL         &kp LALT      &kp RGUI      &kp LSHFT       &kp LA(LC(RG(LSHFT)))       &kp PG_DN      &kp LEFT  &kp DOWN  &kp RIGHT  &none
+            &kp F1            &kp F2        &kp F3        &kp F4          &kp F5                      &kp F6         &kp F7    &kp F8    &kp F9     &kp F10
+                                                    &kp DEL         &trans                      &trans         &trans
+             >;
+        };
+
+        num {
+            bindings = <
+            &none             &none         &kp LPAR              &kp RPAR              &none                           &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTERISK
+            &kp LCTRL         &kp LALT      &mt RGUI LBRC         &mt LSHFT RBRC        &kp LA(LC(RG(LSHFT)))           &kp MINUS  &kp N4  &kp N5  &kp N6  &kp EQUAL
+            &none             &none         &kp LBKT              &kp RBKT              &trans                          &kp DOT    &kp N1  &kp N2  &kp N3  &kp FSLH
+                                                            &trans                &trans                       &kp N0   &trans
             >;
         };
 
