@@ -12,7 +12,7 @@
 #define MEH LS(LC(LALT))
 
 / {
-    behaviors {
+//    behaviors {
 //        as: auto_shift {
 //            compatible = "zmk,behavior-hold-tap";
 //            #binding-cells = <2>;
@@ -70,14 +70,14 @@
 //            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33>;
 //        };
 //    };
-//
+
 //    conditional_layers {
 //        compatible = "zmk,conditional-layers";
 //        tri_layer {
 //            if-layers = <1 2>;
 //            then-layer = <3>;
 //        };
-//    };
+//   };
 
     keymap {
         compatible = "zmk,keymap";
