@@ -4,8 +4,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
-// #define NAV  1
-// #define SYM  2
+#define SYM  1
+// #define NAV  2
 // #define ADJ  3
 
 // #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
@@ -85,10 +85,19 @@
         base {
             bindings = <
             &kp Q           &kp W           &kp E           &kp R                 &kp T                                           &kp Y                             &kp U           &kp I               &kp O           &kp P
-//            &lhm LCTRL A    &lhm LALT S     &lhm LGUI D     &lhm LSHFT F     &lhm LA(LC(LG(LSHFT))) G                             &rhm LA(LC(LG(LSHFT))) H          &rhm LSHFT J    &rhm LGUI K         &rhm LALT L     &rhm LCTRL SEMICOLON
-            &mt LCTRL A    &mt LALT S     &kp LGUI     &mt LSHFT F     &mt LA(LC(LG(LSHFT))) G                             &mt LA(LC(RG(LSHFT))) H          &mt LSHFT J    &kp RGUI          &mt LALT L     &mt LCTRL SEMICOLON
+//            &lhm LCTRL A    &lhm LALT S     &lhm RGUI D     &lhm LSHFT F     &lhm LA(LC(RG(LSHFT))) G                             &rhm LA(LC(LG(LSHFT))) H          &rhm LSHFT J    &rhm LGUI K         &rhm LALT L     &rhm LCTRL SEMICOLON
+            &mt LCTRL A    &mt LALT S     &mt RGUI D     &mt LSHFT F     &mt LA(LC(RG(LSHFT))) G                             &mt LA(LC(RG(LSHFT))) H          &mt LSHFT J    &mt RGUI K         &mt LALT L     &mt LCTRL SEMICOLON
             &kp Z           &kp X           &kp C           &kp V                 &kp B                                           &kp N                             &kp M           &kp COMMA           &kp PERIOD      &kp SLASH
-                                                                                  &kp BACKSPACE   &kp TAB    &kp ENTER    &kp SPACE
+                                                                                  &lt 1 BACKSPACE   &kp TAB    &kp ENTER    &lt 1 SPACE
+            >;
+        };
+
+        sym {
+            bindings = <
+            &kp EXCL         &kp AT         &kp LPAR             &kp RPAR              &kp PRCNT     &kp PLUS    &kp AMPS       &kp HASH    &kp UNDER        &kp STAR
+            &kp CARET        &kp TILDE      &kp LBRC             &kp RBRC              &kp DLLR      &kp MINUS   &kp GRAVE      &kp SQT     &kp DQT          &kp EQUAL
+            &none            &kp BSLH       &kp LBKT             &kp RBKT              &none         &kp DOT     &kp PIPE       &caps_word  &kp CAPS         &kp FSLH
+                                                     &trans                &trans        &trans      &trans
             >;
         };
 
