@@ -107,10 +107,10 @@
     combos {
         compatible = "zmk,combos";
 
-        escape {
-            bindings = <&kp ESC>;
-            key-positions = <00 10>;
-        };
+        //escape {
+        //    bindings = <&kp ESC>;
+        //    key-positions = <00 10>;
+        //};
 
         undo {
             bindings = <&kp LG(Z)>;
