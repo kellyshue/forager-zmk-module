@@ -107,10 +107,10 @@
     combos {
         compatible = "zmk,combos";
 
-        //escape {
-        //    bindings = <&kp ESC>;
-        //    key-positions = <00 10>;
-        //};
+        escape {
+            bindings = <&kp ESC>;
+            key-positions = <0 10>;
+        };
 
         undo {
             bindings = <&kp LG(Z)>;
@@ -136,6 +136,12 @@
             bindings = <&kp LG(LS(V))>;
             key-positions = <14 24>;
         };
+
+        numlayer {
+            bindings = <&to 3>;
+            key-positions = <19 29>;
+        };
+
     };
 
     keymap {
@@ -174,7 +180,7 @@
             bindings = <
             &none             &none         &kp LPAR              &kp RPAR              &none                           &kp PLUS   &kp N7  &kp N8  &kp N9  &kp KP_ASTERISK
             &kp LCTRL         &kp LALT      &lhm LGUI LBRC         &lhms LSHFT RBRC        &kp HYPER           &kp MINUS  &kp N4  &kp N5  &kp N6  &kp EQUAL
-            &none             &none         &kp LBKT              &kp RBKT              &trans                          &kp DOT    &kp N1  &kp N2  &kp N3  &kp FSLH
+            &none             &none         &kp LBKT              &kp RBKT              &to 0                          &kp DOT    &kp N1  &kp N2  &kp N3  &kp FSLH
                                                             &trans                &trans                       &kp N0   &trans
             >;
         };
