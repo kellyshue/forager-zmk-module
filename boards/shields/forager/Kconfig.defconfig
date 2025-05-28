@@ -1,7 +1,7 @@
 if FORAGER_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Forager"
+    default "Forager2"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
