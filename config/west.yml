@@ -11,7 +11,7 @@ manifest:
     import: app/west.yml
   - name: zmk-rgbled-widget
     url: https://github.com/caksoylar/zmk-rgbled-widget
-    revision: main
+    revision: c12cf5cb28e44809d9f07e895ffcf10c0026d3dd
     path: modules/zmk-rgbled-widget
   self:
     path: config
