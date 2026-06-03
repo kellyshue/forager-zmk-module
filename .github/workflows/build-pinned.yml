@@ -1,0 +1,42 @@
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: zmkfirmware/zmk-build-arm:stable
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: West init
+        run: west init -l config
+
+      - name: West update
+        run: west update
+
+      - name: West zephyr export
+        run: west zephyr-export
+
+      - name: Build left half
+        run: |
+          west build -s zmk/app -d build/left -b seeeduino_xiao_ble -- \
+            -DZMK_CONFIG="$GITHUB_WORKSPACE/config" \
+            -DSHIELD="forager_left rgbled_adapter" \
+            -DZMK_EXTRA_MODULES="$GITHUB_WORKSPACE"
+
+      - name: Build right half
+        run: |
+          west build -s zmk/app -d build/right -b seeeduino_xiao_ble -- \
+            -DZMK_CONFIG="$GITHUB_WORKSPACE/config" \
+            -DSHIELD="forager_right rgbled_adapter" \
+            -DZMK_EXTRA_MODULES="$GITHUB_WORKSPACE"
+
+      - name: Package firmware
+        run: |
+          mkdir -p firmware
+          cp build/left/zephyr/zmk.uf2 firmware/forager_left.uf2
+          cp build/right/zephyr/zmk.uf2 firmware/forager_right.uf2
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: forager-firmware
+          path: firmware/*.uf2
