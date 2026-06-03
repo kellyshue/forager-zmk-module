@@ -11,7 +11,8 @@ jobs:
         run: |
           mkdir -p /tmp/zmk-config
           cp -R config /tmp/zmk-config/config
-          west init -l /tmp/zmk-config/config /tmp/zmk-config
+          cd /tmp/zmk-config
+          west init -l config
 
       - name: West update
         working-directory: /tmp/zmk-config
