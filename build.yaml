@@ -20,7 +20,19 @@
 include:
   - board: seeeduino_xiao_ble
     shield: forager_left rgbled_adapter
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Forager Blue\"
+    artifact-name: forager_blue_left
   - board: seeeduino_xiao_ble
     shield: forager_right rgbled_adapter
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Forager Blue\"
+    artifact-name: forager_blue_right
+  - board: seeeduino_xiao_ble
+    shield: forager_left rgbled_adapter
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Forager Purple\"
+    artifact-name: forager_purple_left
+  - board: seeeduino_xiao_ble
+    shield: forager_right rgbled_adapter
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Forager Purple\"
+    artifact-name: forager_purple_right
   - board: seeeduino_xiao_ble
     shield: settings_reset
