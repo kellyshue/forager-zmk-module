@@ -117,6 +117,13 @@
             require-prior-idle-ms = <150>;
         };
 
+        bt_clear_current_profile {
+            bindings = <&bt BT_CLR>;
+            key-positions = <0 9 20 29>;
+            timeout-ms = <1000>;
+            require-prior-idle-ms = <150>;
+        };
+
     };
 
     keymap {
@@ -142,7 +149,7 @@
 
         nav {
             bindings = <
-            &none             &none         &none         &none           &none                       &kp PG_UP      &kp HOME  &kp UP    &kp END    &kp SYSREQ
+            &bt BT_SEL 0      &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3    &bt BT_SEL 4                &kp PG_UP      &kp HOME  &kp UP    &kp END    &kp SYSREQ
             &kp LCTRL         &kp LALT      &kp LGUI      &kp LSHFT       &kp HYPER       &kp PG_DN      &kp LEFT  &kp DOWN  &kp RIGHT  &none
             &kp F1            &kp F2        &kp F3        &kp F4          &kp F5                      &kp F6         &kp F7    &kp F8    &kp F9     &kp F10
                                                     &kp DEL         &trans                      &trans         &trans
@@ -165,4 +172,3 @@
     tapping-term-ms = <200>;
     quick-tap-ms = <175>;
 };
-
